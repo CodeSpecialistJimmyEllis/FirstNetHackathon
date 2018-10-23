@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+<title>EMERGENY MAP DISPLAY OF KAPLAN BUILDING</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<style>
+
+
+
+</style>
+
+<script>
+
+var width;
+var height;
+
+$(document).ready(function() {
+
+
+width = $(window).width(); 
+height = $(window).height();
+// console.log("hello world");
+console.log("the width  " + width);
+console.log('the height ' + height);
+
+$("#site").html("<BR>happyness</BR>");
+$("#site").html("<img src='Kaplan Institute Floor Plan.png' width='" + width + "px' height='" + height*1.5 + "px' >" );
+});
+
+
+
+
+</script>
+</head>
+<body>
+
+
+<div id="site"></div>
+
+
+
+</body>
+</html> 

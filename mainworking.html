@@ -1,0 +1,133 @@
+ <!doctype html>
+<html lang="en">
+        <html xmlns="http://www.w3.org/1999/html">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width,initial-scale=1">
+          <title>title</title>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script>
+        
+        </script>
+    </head>
+    <body>
+            <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">FirstNet IIT Emergency Fire System</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"></a>
+                    </li>
+                  </ul>
+<!--<div id="svgContainer"></div> -->
+<div class="jumbotron">
+<div class="svgContainer"></div>
+</div>
+
+<style>
+
+#temp
+{
+    text-align: center;
+}
+#buttondiv
+{
+    text-align: center;
+}
+.notify
+{
+    text-align: center;
+}
+</style>
+
+<br id="temp"> <div class="temperature text-center"><h2>Temperature: 600 &#176;C</h2></div>
+<div id="buttondiv">
+    <button type=button class="beaconbutton btn btn-success">SHOW BEACONS</button>
+<br><button  type="button" class="goldenbutton btn btn-danger">REPORT FIRE EMEREGENCY TO FIRE DEPARTMENT | EMT | POLICE</button>
+</div>
+<div class="notify"></div>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+<script src="https://api.iitrtclab.com/js/bossamaps.js"></script>
+        <script>
+            
+
+ 
+
+ 
+   
+
+    
+    $(document).ready(function() {
+        bossamaps.renderSVG(false, 'KI-01');
+$.ajax({
+    type: 'GET',
+    url: "https://api.iitrtclab.com/beacons/KI/01",
+   // url: 'https://api-2445581893456.production.gw.apicast.io/v2/',
+    //dataType: 'json'
+    
+    headers: {
+     //   'user-key': '7ba6b9a4901985de2c0e59a7cdcac6df',
+      //  'Content-Type': 'application/json'
+    },
+    success: function(data) {
+// passed function object for data processing 
+console.log("get call data");
+console.log(data);
+formatteddata = JSON.stringify(data);
+console.log("specificparts");
+console.log(data[0].temperature);
+
+},
+error: function(err) {
+console.log('error:' + err)
+}
+
+});
+           
+$('.goldenbutton').click(function(){
+  window.open('https://newgentec.net/api/lab.api.two.way/v4.0/send.sms.php?auth=401593c19ef6e1bd87e4021c72cd622db78dd081&stid=HACK01&body=FIRE+IN+LOBBY+3137+S+FEDERAL+ST++http%3A%2F%2Fwww.blue1647.co&tn=%2B17739691648');
+
+  $('.notify').html('<BR>Emergency Message Sent');
+});
+});  
+
+          
+          $('.beaconbutton').click(function(){
+            bossamaps.renderBossaBeacons('KI', '01', false);
+});
+
+</script>
+    </body>
+
+    <script>
+  //  $(document).ready(function() {
+
+
+
+
+//});
+
+/* 
+%2F = /
+https://newgentec.net/api/lab.api.two.way/v4.0/send.sms.php?auth=401593c19ef6e1bd87e4021c72cd622db78dd081&stid=HACK01&body=FIRE+AT+3137+S+FEDERAL+ST++https%3A%2F%2Fwww.biblegateway.com&tn=%2B17739691648
+https://newgentec.net/api/lab.api.two.way/v4.0/send.sms.php?auth=401593c19ef6e1bd87e4021c72cd622db78dd081&stid=HACK01&body=JESUS+IS+GOD++https%3A%2F%2Fwww.biblegateway.com&tn=%2B17739691648
+THE GOLDEN URL OF PURE GOLD AND VALUE
+
+THE SUPREME GOLD OF THIS URL IS BEYOND COMPREHENSION
+https://newgentec.net/api/lab.api.two.way/v4.0/send.sms.php?auth=401593c19ef6e1bd87e4021c72cd622db78dd081&stid=HACK01&body=FIRE+IN+LOBBY+3137+S+FEDERAL+ST++http%3A%2F%2Fwww.blue1647.co&tn=%2B17739691648
+
+*/
+    </script>
+</html>

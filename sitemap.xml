@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://api.iitrtclab.com/</loc>
+  <lastmod>2018-10-20T08:03:08+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://api.iitrtclab.com/apidoc/</loc>
+  <lastmod>2017-10-29T03:54:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://api.iitrtclab.com/projects_and_publications</loc>
+  <lastmod>2018-10-20T08:03:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://api.iitrtclab.com/pdf/Dispatchable-Indoor-Location-Davids-et-al.pdf</loc>
+  <lastmod>2017-08-04T16:47:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://api.iitrtclab.com/pdf/Indoor-Location-BT-Based-SU2016.pdf</loc>
+  <lastmod>2017-08-04T16:47:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://api.iitrtclab.com/pdf/TFM_MET_RoisSisoFranciscoJose_IndoorLocationPlatformForDevelopersAndMobileApplications.pdf</loc>
+  <lastmod>2017-08-04T16:47:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

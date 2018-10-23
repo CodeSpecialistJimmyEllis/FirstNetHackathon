@@ -1,0 +1,44 @@
+<!doctype>
+<html>
+    <head>
+        <title></title>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script type="text/javascript" src="jquery-3.1.1.js"></script>
+    </head>
+    <body>
+
+        <script>
+            
+            $(document).ready(function() {
+
+$.ajax({
+    type: 'POST',
+    url: "https://stream.watsonplatform.net/text-to-speech/api/v1/synthesize",
+   // url: 'https://api-2445581893456.production.gw.apicast.io/v2/',
+    //dataType: 'json'
+    
+    headers: {
+     //   'user-key': '7ba6b9a4901985de2c0e59a7cdcac6df',
+      //  'Content-Type': 'application/json'
+
+       'Content-Type': 'application/json',
+       'Accept': 'audio/wav' 
+    },
+    success: function(data) {
+// passed function object for data processing 
+console.log("get call data");
+console.log(data);
+
+},
+error: function(err) {
+console.log('error:' + err)
+}
+
+});
+                        
+});  
+
+
+        </script>
+    </body>
+</html>
